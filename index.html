@@ -1,218 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buen Sabor – Menú</title>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Satisfy&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: #1c1c1c;
-      color: #f0ece0;
-      font-family: 'DM Sans', sans-serif;
-      min-height: 100vh;
-      padding-bottom: 50px;
-    }
-
-    /* HEADER */
-    .header {
-      background: #111;
-      padding: 36px 20px 28px;
-      text-align: center;
-      border-bottom: 3px solid #e8d5a3;
-      position: relative;
-    }
-    .header::before {
-      content: '✦ ☕ ✦';
-      display: block;
-      font-size: 14px;
-      color: #c8a96e;
-      letter-spacing: 8px;
-      margin-bottom: 10px;
-    }
-    .header h1 {
-      font-family: 'Satisfy', cursive;
-      font-size: clamp(42px, 11vw, 64px);
-      color: #f0ece0;
-      line-height: 1;
-      text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
-    }
-    .header .sub {
-      font-family: 'Caveat', cursive;
-      font-size: 16px;
-      color: #c8a96e;
-      margin-top: 8px;
-      letter-spacing: 1px;
-    }
-    .header .badge {
-      display: inline-block;
-      font-family: 'Caveat', cursive;
-      font-size: 13px;
-      color: #888;
-      border: 1px dashed #444;
-      padding: 3px 14px;
-      border-radius: 20px;
-      margin-top: 10px;
-    }
-
-    /* SECTION */
-    .section { padding: 22px 16px 4px; }
-    .section-title {
-      font-family: 'Caveat', cursive;
-      font-size: 22px;
-      font-weight: 700;
-      color: #e8d5a3;
-      text-align: center;
-      border-top: 1px dashed #444;
-      border-bottom: 1px dashed #444;
-      padding: 8px 0;
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
-    .section-title span { margin: 0 8px; font-size: 14px; color: #c8a96e; }
-
-    /* ITEM */
-    .item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 11px 14px;
-      margin-bottom: 8px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.04);
-      border-left: 2px dashed #555;
-    }
-    .item-left { flex: 1; }
-    .item-name {
-      font-family: 'Caveat', cursive;
-      font-size: 19px;
-      font-weight: 700;
-      color: #f0ece0;
-      line-height: 1.2;
-    }
-    .item-desc {
-      font-size: 11px;
-      color: #888;
-      margin-top: 2px;
-      font-style: italic;
-    }
-    .item-price {
-      font-family: 'Caveat', cursive;
-      font-size: 20px;
-      font-weight: 700;
-      color: #e8d5a3;
-      white-space: nowrap;
-      margin-left: 12px;
-      padding-top: 2px;
-    }
-    .item-price::before { content: '$'; font-size: 14px; vertical-align: super; }
-
-    /* COMBO highlight */
-    .item.combo {
-      background: rgba(200,169,110,0.08);
-      border-left: 2px dashed #c8a96e;
-    }
-    .item.combo .item-name { color: #e8d5a3; }
-    .item.combo .item-name::before { content: '★ '; font-size: 13px; color: #c8a96e; }
-
-    /* DIVIDER */
-    .divider {
-      text-align: center;
-      color: #444;
-      font-size: 18px;
-      letter-spacing: 6px;
-      padding: 6px 0;
-    }
-
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      padding: 30px 20px 0;
-      font-family: 'Caveat', cursive;
-      font-size: 15px;
-      color: #666;
-      border-top: 1px dashed #333;
-      margin: 20px 16px 0;
-    }
-    .footer p { margin-top: 4px; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Buen Sabor – Menú</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Satisfy&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+background: #1c1c1c;
+color: #f0ece0;
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+padding-bottom: 50px;
+}
+/* HEADER */
+.header {
+background: #111;
+padding: 36px 20px 28px;
+text-align: center;
+border-bottom: 3px solid #e8d5a3;
+position: relative;
+}
+.header::before {
+content: '✦ ☕ ✦';
+display: block;
+font-size: 14px;
+color: #c8a96e;
+letter-spacing: 8px;
+margin-bottom: 10px;
+}
+.header h1 {
+font-family: 'Satisfy', cursive;
+font-size: clamp(42px, 11vw, 64px);
+color: #f0ece0;
+line-height: 1;
+text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+.header .sub {
+font-family: 'Caveat', cursive;
+font-size: 16px;
+color: #c8a96e;
+margin-top: 8px;
+letter-spacing: 1px;
+}
+.header .badge {
+display: inline-block;
+font-family: 'Caveat', cursive;
+font-size: 13px;
+color: #888;
+border: 1px dashed #444;
+padding: 3px 14px;
+border-radius: 20px;
+margin-top: 10px;
+}
+/* SECTION */
+.section { padding: 22px 16px 4px; }
+.section-title {
+font-family: 'Caveat', cursive;
+font-size: 22px;
+font-weight: 700;
+color: #e8d5a3;
+text-align: center;
+border-top: 1px dashed #444;
+border-bottom: 1px dashed #444;
+padding: 8px 0;
+margin-bottom: 14px;
+letter-spacing: 1px;
+}
+.section-title span { margin: 0 8px; font-size: 14px; color: #c8a96e; }
+/* ITEM */
+.item {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+padding: 11px 14px;
+margin-bottom: 8px;
+border-radius: 8px;
+background: rgba(255,255,255,0.04);
+border-left: 2px dashed #555;
+}
+.item-left { flex: 1; }
+.item-name {
+font-family: 'Caveat', cursive;
+font-size: 19px;
+font-weight: 700;
+color: #f0ece0;
+line-height: 1.2;
+}
+.item-desc {
+font-size: 11px;
+color: #888;
+margin-top: 2px;
+font-style: italic;
+}
+.item-price {
+font-family: 'Caveat', cursive;
+font-size: 20px;
+font-weight: 700;
+color: #e8d5a3;
+white-space: nowrap;
+margin-left: 12px;
+padding-top: 2px;
+}
+.item-price::before { content: '$'; font-size: 14px; vertical-align: super; }
+/* COMBO highlight */
+.item.combo {
+background: rgba(200,169,110,0.08);
+border-left: 2px dashed #c8a96e;
+}
+.item.combo .item-name { color: #e8d5a3; }
+.item.combo .item-name::before { content: '★ '; font-size: 13px; color: #c8a96e; }
+/* DIVIDER */
+.divider {
+text-align: center;
+color: #444;
+font-size: 18px;
+letter-spacing: 6px;
+padding: 6px 0;
+}
+/* FOOTER */
+.footer {
+text-align: center;
+padding: 30px 20px 0;
+font-family: 'Caveat', cursive;
+font-size: 15px;
+color: #666;
+border-top: 1px dashed #333;
+margin: 20px 16px 0;
+}
+.footer p { margin-top: 4px; }
+</style>
 </head>
 <body>
-
 <div class="header">
-  <h1>Buen Sabor</h1>
-  <div class="sub">Tu Cafetería de Especialidad · Menú de Primavera</div>
-  <div class="badge">Precios actualizados Abril 2026</div>
+<h1>Buen Sabor</h1>
+<div class="sub">Tu Cafetería de Especialidad · Menú de Primavera</div>
+<div class="badge">Precios actualizados Abril 2026</div>
 </div>
-
 <!-- BEBIDAS CALIENTES -->
 <div class="section">
-  <div class="section-title"><span>☕</span> Bebidas Calientes <span>☕</span></div>
-  <div class="item"><div class="item-left"><div class="item-name">Espresso</div><div class="item-desc">Individual</div></div><div class="item-price">1.200</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Espresso Doble</div><div class="item-desc">Doble carga</div></div><div class="item-price">1.800</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Americano</div><div class="item-desc">Espresso con agua caliente</div></div><div class="item-price">1.900</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Cortado</div><div class="item-desc">Con leche cremada</div></div><div class="item-price">1.600</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Cappuccino</div><div class="item-desc">Con cacao y canela</div></div><div class="item-price">2.500</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Café con Leche</div><div class="item-desc">Medio</div></div><div class="item-price">2.000</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Latte Macchiato</div><div class="item-desc">Espresso sobre leche vaporizada</div></div><div class="item-price">2.600</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Flat White</div><div class="item-desc">Espresso doble con microespuma</div></div><div class="item-price">2.900</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Té</div><div class="item-desc">Earl Grey o Hierbas</div></div><div class="item-price">1.700</div></div>
+<div class="section-title"><span>☕</span> Bebidas Calientes <span>☕</span></div>
+<div class="item"><div class="item-left"><div class="item-name">Espresso</div><div class="item-desc">Individual</div></div><div class="item-price">1.200</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Espresso Doble</div><div class="item-desc">Doble carga</div></div><div class="item-price">1.800</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Americano</div><div class="item-desc">Espresso con agua caliente</div></div><div class="item-price">1.900</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Cortado</div><div class="item-desc">Con leche cremada</div></div><div class="item-price">1.600</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Cappuccino</div><div class="item-desc">Con cacao y canela</div></div><div class="item-price">2.500</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Café con Leche</div><div class="item-desc">Medio</div></div><div class="item-price">2.000</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Latte Macchiato</div><div class="item-desc">Espresso sobre leche vaporizada</div></div><div class="item-price">2.600</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Flat White</div><div class="item-desc">Espresso doble con microespuma</div></div><div class="item-price">2.900</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Té</div><div class="item-desc">Earl Grey o Hierbas</div></div><div class="item-price">1.700</div></div>
 </div>
-
 <div class="divider">· · · ✦ · · ·</div>
-
 <!-- DULCES Y PASTELERÍA -->
 <div class="section">
-  <div class="section-title"><span>🥐</span> Dulces y Pastelería <span>🥐</span></div>
-  <div class="item"><div class="item-left"><div class="item-name">Lemon Pie</div><div class="item-desc">Porción</div></div><div class="item-price">3.500</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Cheesecake de New York</div><div class="item-desc">Porción clásica</div></div><div class="item-price">4.200</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Budín de Zanahoria</div><div class="item-desc">Con glasé de queso crema</div></div><div class="item-price">2.300</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Medialuna de Manteca</div><div class="item-desc">Recién horneada</div></div><div class="item-price">950</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Pan de Chocolate</div><div class="item-desc">Pain au Chocolat</div></div><div class="item-price">1.500</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Pavlova con Frutos Rojos</div><div class="item-desc">Merengue, crema y berries</div></div><div class="item-price">4.800</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Galletitas de la Casa</div><div class="item-desc">3 unidades surtidas</div></div><div class="item-price">1.200</div></div>
+<div class="section-title"><span>🥐</span> Dulces y Pastelería <span>🥐</span></div>
+<div class="item"><div class="item-left"><div class="item-name">Lemon Pie</div><div class="item-desc">Porción</div></div><div class="item-price">3.500</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Cheesecake de New York</div><div class="item-desc">Porción clásica</div></div><div class="item-price">4.200</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Budín de Zanahoria</div><div class="item-desc">Con glasé de queso crema</div></div><div class="item-price">2.300</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Medialuna de Manteca</div><div class="item-desc">Recién horneada</div></div><div class="item-price">950</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Pan de Chocolate</div><div class="item-desc">Pain au Chocolat</div></div><div class="item-price">1.500</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Pavlova con Frutos Rojos</div><div class="item-desc">Merengue, crema y berries</div></div><div class="item-price">4.800</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Galletitas de la Casa</div><div class="item-desc">3 unidades surtidas</div></div><div class="item-price">1.200</div></div>
 </div>
-
 <div class="divider">· · · ✦ · · ·</div>
-
 <!-- SÁNDWICHES Y SALADOS -->
 <div class="section">
-  <div class="section-title"><span>🥪</span> Sándwiches y Salados <span>🥪</span></div>
-  <div class="item"><div class="item-left"><div class="item-name">Tostadas con Palta</div><div class="item-desc">Avocado Toast</div></div><div class="item-price">5.500</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Bagel de Salmón y Queso Crema</div><div class="item-desc">Con alcaparras</div></div><div class="item-price">7.800</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Scone de Queso</div><div class="item-desc">Con mix de hierbas</div></div><div class="item-price">1.800</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Tostado Clásico</div><div class="item-desc">Jamón y queso en pan de campo</div></div><div class="item-price">3.900</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Sandwich Vegetariano</div><div class="item-desc">Vegetales asados, rúcula, hummus</div></div><div class="item-price">4.200</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Croissant Relleno</div><div class="item-desc">Jamón crudo y queso blando</div></div><div class="item-price">4.500</div></div>
+<div class="section-title"><span>🥪</span> Sándwiches y Salados <span>🥪</span></div>
+<div class="item"><div class="item-left"><div class="item-name">Tostadas con Palta</div><div class="item-desc">Avocado Toast</div></div><div class="item-price">5.500</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Bagel de Salmón y Queso Crema</div><div class="item-desc">Con alcaparras</div></div><div class="item-price">7.800</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Scone de Queso</div><div class="item-desc">Con mix de hierbas</div></div><div class="item-price">1.800</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Tostado Clásico</div><div class="item-desc">Jamón y queso en pan de campo</div></div><div class="item-price">3.900</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Sandwich Vegetariano</div><div class="item-desc">Vegetales asados, rúcula, hummus</div></div><div class="item-price">4.200</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Croissant Relleno</div><div class="item-desc">Jamón crudo y queso blando</div></div><div class="item-price">4.500</div></div>
 </div>
-
 <div class="divider">· · · ✦ · · ·</div>
-
 <!-- BEBIDAS FRÍAS Y COMBOS -->
 <div class="section">
-  <div class="section-title"><span>🧃</span> Bebidas Frías <span>🧃</span></div>
-  <div class="item"><div class="item-left"><div class="item-name">Iced Latte</div><div class="item-desc">Café, leche y hielo</div></div><div class="item-price">2.800</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Jugo de Naranja Exprimido</div><div class="item-desc">Natural al momento</div></div><div class="item-price">3.200</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Limonada con Menta y Jengibre</div><div class="item-desc">500 ml</div></div><div class="item-price">3.000</div></div>
-  <div class="item"><div class="item-left"><div class="item-name">Agua Mineral</div><div class="item-desc">Con o sin gas</div></div><div class="item-price">1.500</div></div>
+<div class="section-title"><span>🧃</span> Bebidas Frías <span>🧃</span></div>
+<div class="item"><div class="item-left"><div class="item-name">Iced Latte</div><div class="item-desc">Café, leche y hielo</div></div><div class="item-price">2.800</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Jugo de Naranja Exprimido</div><div class="item-desc">Natural al momento</div></div><div class="item-price">3.200</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Limonada con Menta y Jengibre</div><div class="item-desc">500 ml</div></div><div class="item-price">3.000</div></div>
+<div class="item"><div class="item-left"><div class="item-name">Agua Mineral</div><div class="item-desc">Con o sin gas</div></div><div class="item-price">1.500</div></div>
 </div>
-
 <div class="divider">· · · ✦ · · ·</div>
-
 <!-- COMBOS -->
 <div class="section">
-  <div class="section-title"><span>★</span> Combos Especiales <span>★</span></div>
-  <div class="item combo"><div class="item-left"><div class="item-name">Combo Clásico</div><div class="item-desc">Café con Leche + 2 Medialunas</div></div><div class="item-price">4.200</div></div>
-  <div class="item combo"><div class="item-left"><div class="item-name">Combo Primavera</div><div class="item-desc">Iced Latte + Tostadas con Palta</div></div><div class="item-price">7.500</div></div>
-  <div class="item combo"><div class="item-left"><div class="item-name">Brunch para Uno</div><div class="item-desc">Café, Jugo, Bagel y Dulce</div></div><div class="item-price">10.000</div></div>
+<div class="section-title"><span>★</span> Combos Especiales <span>★</span></div>
+<div class="item combo"><div class="item-left"><div class="item-name">Combo Clásico</div><div class="item-desc">Café con Leche + 2 Medialunas</div></div><div class="item-price">4.200</div></div>
+<div class="item combo"><div class="item-left"><div class="item-name">Combo Primavera</div><div class="item-desc">Iced Latte + Tostadas con Palta</div></div><div class="item-price">7.500</div></div>
+<div class="item combo"><div class="item-left"><div class="item-name">Brunch para Uno</div><div class="item-desc">Café, Jugo, Bagel y Dulce</div></div><div class="item-price">10.000</div></div>
 </div>
-
 <div class="footer">
-  <p>☕ Efectivo · Transferencia · Débito ☕</p>
-  <p>Los precios incluyen IVA · Sujeto a disponibilidad</p>
+<p>☕ Efectivo · Transferencia · Débito ☕</p>
+<p>Los precios incluyen IVA · Sujeto a disponibilidad</p>
 </div>
-
 </body>
-</html> 
+</html>
